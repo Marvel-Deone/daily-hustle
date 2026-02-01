@@ -117,7 +117,7 @@ export function Hero() {
                             ease: "easeInOut",
                             repeat: Infinity,
                         }}
-                        className="relative mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent p-0"
+                        className="relative rotate-2 mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent p-0"
                     >
                         <div className="rounded-[31px] overflow-hidden">
                             <Image
