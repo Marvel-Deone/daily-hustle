@@ -14,7 +14,7 @@ export function Review() {
                 <div
                     className="flex flex-col md:flex-row gap-6"
                 >
-                    <div className="!rounded-[2rem] w-[386px] shadow-md relative hover:shadow-xl hover:shadow-[#c4162a]/20 hover:-translate-y-2.5 transition-all duration-500 hover:border-[#c4162a]/20 p-8 h-full flex flex-col justify-between border hover:border-2 border-gray-100">
+                    <div className="!rounded-[2rem] md:w-[386px] shadow-md relative hover:shadow-xl hover:shadow-[#c4162a]/20 hover:-translate-y-2.5 transition-all duration-500 hover:border-[#c4162a]/20 p-8 h-full flex flex-col justify-between border hover:border-2 border-gray-100">
                         <div>
                             <div className="flex items-center space-x-1 text-yellow-400 mb-6 text-xs">
                                 ★★★★★
