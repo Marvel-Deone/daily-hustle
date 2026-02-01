@@ -79,10 +79,10 @@ export function Navbar() {
 
                 {/* Nav */}
                 <nav className="hidden md:flex items-center gap-10 text-[13px] text-black/60">
-                    <Link href="" className="hover:text-black transition">Earn</Link>
-                    <Link href="" className="hover:text-black transition">Process</Link>
-                    <Link href="" className="hover:text-black transition">Corporate</Link>
-                    <Link href="" className="hover:text-black transition">Reviews</Link>
+                    <Link href="#earn" className="hover:text-black transition">Earn</Link>
+                    <Link href="#onboarding" className="hover:text-black transition">Process</Link>
+                    <Link href="#corporate" className="hover:text-black transition">Corporate</Link>
+                    <Link href="#reviews" className="hover:text-black transition">Reviews</Link>
                 </nav>
 
                 {/* Right */}

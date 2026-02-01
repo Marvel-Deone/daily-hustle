@@ -1,12 +1,7 @@
-
 "use client"
-
-import { motion } from "framer-motion"
-import Image from "next/image"
 
 export function CorporatePackage() {
     const moveCarousel = (trackId: string, direction: number) => {
-        // TODO: wire up carousel logic
         console.log(trackId, direction);
     };
     return (

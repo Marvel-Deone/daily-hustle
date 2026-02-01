@@ -74,7 +74,7 @@ import Image from "next/image"
 
 export function PocketToday() {
     return (
-        <section className="relative overflow-hidden py-24 lg:py-28">
+        <section id="earn" className="relative overflow-hidden py-24 lg:py-28">
             <div className="mx-auto max-w-7xl px-6 grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
                 {/* Text */}
                 {/* <motion.div

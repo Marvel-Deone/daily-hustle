@@ -261,7 +261,7 @@ export function CampaignOnboardingCarousel() {
                     Campaign <span className="text-brand-red">Onboarding Process</span>
                 </h3>
 
-                <div className="grid md:grid-cols-4 gap-6 text-left">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
                     <div className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-red transition">
                         <div className="text-2xl mb-6">📝</div>
                         <h4 className="text-xs font-black uppercase mb-3 tracking-tight">

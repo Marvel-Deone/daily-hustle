@@ -195,13 +195,14 @@
 
 "use client"
 
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { motion } from "framer-motion"
+import useEmblaCarousel from "embla-carousel-react";
 
 const cards = [
     {
         title: "STARTUPS & SMES",
-        price: "₦150,000",
+        price: "≤ ₦400,000",
         tag: "BASE CAMPAIGN",
         features: [
             "3k – 10k Completions",
@@ -211,7 +212,7 @@ const cards = [
     },
     {
         title: "BRANDS & AGENCIES",
-        price: "₦500,000",
+        price: "≤ ₦3,500,000",
         tag: "MANAGED PACKAGE",
         features: [
             "20k – 100k+ Engagements",
@@ -221,7 +222,7 @@ const cards = [
     },
     {
         title: "MUSIC LABEL",
-        price: "₦300,000",
+        price: "≤ ₦1,750,000",
         tag: "STRATEGY RELEASE",
         popular: true,
         features: [
@@ -230,20 +231,48 @@ const cards = [
             "Viral Velocity Metrics",
         ],
     },
+    {
+        title: "Fintech & Web3",
+        price: "≥ ₦750,000",
+        tag: "Acquisition Sprint",
+        popular: true,
+        features: [
+            "Verified App Installs",
+            "In-App Activity Proof",
+            "CSV Performance Export",
+        ],
+    },
 ]
 
 export function ManagedPlans() {
     const [index, setIndex] = useState(0)
+    const [emblaRef, emblaApi] = useEmblaCarousel({
+        align: "start",
+        loop: true,
+        containScroll: "trimSnaps",
+    });
 
-    const prev = () => setIndex((i) => Math.max(i - 1, 0))
+    const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+    const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+    const visibleCards = 2
+    const maxIndex = cards.length - visibleCards
+
+    const prev = () =>
+        setIndex((i) => Math.max(i - 1, 0))
+
     const next = () =>
-        setIndex((i) => Math.min(i + 1, cards.length - 3))
+        setIndex((i) => Math.min(i + 1, maxIndex))
+
+    // const prev = () => setIndex((i) => Math.max(i - 1, 0))
+    // const next = () =>
+    //     setIndex((i) => Math.min(i + 1, cards.length - 3))
 
     return (
-        <section className="py-28 overflow-hidden">
+        <section id="corporate" className="py-28 overflow-hidden">
             <div className="mx-auto max-w-7xl px-6">
                 {/* Header row */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div className="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
                     <div>
                         <h2 className="text-[10px] font-black uppercase text-brand-red tracking-[0.4em] mb-4">
                             Strategic Managed Plans
@@ -256,7 +285,8 @@ export function ManagedPlans() {
 
                     <div className="flex gap-3">
                         <button
-                            // onClick={() => moveCarousel("corpTrack", -1)}
+                            onClick={prev}
+                            aria-label="Previous"
                             className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-brand-red hover:text-white transition shadow-sm"
                         >
                             <svg
@@ -273,7 +303,8 @@ export function ManagedPlans() {
                         </button>
 
                         <button
-                            // onClick={() => moveCarousel("corpTrack", 1)}
+                            onClick={next}
+                            aria-label="Next"
                             className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center hover:bg-brand-red hover:text-white transition shadow-sm"
                         >
                             <svg
@@ -292,17 +323,28 @@ export function ManagedPlans() {
                 </div>
 
                 {/* Cards */}
-                <div className="relative">
+                <div className="relative overflow-hidden">
                     <motion.div
-                        animate={{ x: -index * 360 }}
+                        ref={emblaRef}
+                        animate={{ x: -index * 568 }} // card width + gap
                         transition={{ duration: 0.45, ease: "easeOut" }}
-                        className="flex gap-8"
+                        className="flex gap-8 will-change-transform"
                     >
                         {cards.map((card, i) => (
                             <div
                                 key={i}
-                                className="bg-white w-[540px] rounded-[2rem] p-10 flex flex-col justify-between border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500 hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20"
+                                className="bg-white w-[540px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between
+                       border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative
+                       hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500
+                       hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20"
                             >
+                                {/* Popular badge */}
+                                {/* {card.popular && (
+                                    <span className="absolute -top-4 right-8 bg-[#c4162a] text-white text-[9px] font-black uppercase px-4 py-1 rounded-full tracking-widest">
+                                        Most Popular
+                                    </span>
+                                )} */}
+
                                 <div>
                                     <h4 className="text-lg font-black uppercase mb-6 tracking-tight text-gray-800">
                                         {card.title}
@@ -312,14 +354,14 @@ export function ManagedPlans() {
                                         {card.price}
                                     </p>
 
-                                    <p className="text-[9px] font-black uppercase text-brand-red mb-8 tracking-widest italic">
+                                    <p className="text-[9px] font-black uppercase text-[#c4162a] mb-8 tracking-widest italic">
                                         {card.tag}
                                     </p>
 
                                     <ul className="text-[11px] space-y-3 text-gray-500 font-bold">
                                         {card.features.map((f) => (
                                             <li key={f} className="flex gap-2">
-                                                <span>✓</span>
+                                                <span className="text-[#c4162a]">✓</span>
                                                 {f}
                                             </li>
                                         ))}
@@ -335,12 +377,11 @@ export function ManagedPlans() {
 
                     <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
                         <div className="lg:w-1/2 text-center lg:text-left">
-                            <h4 className="text-2xl font-black uppercase mb-4 tracking-tight">
+                            <h4 className="text-2xl font-black uppercase mb-4 tracking-tight text-[#BE123C]">
                                 Pricing Transparency
                             </h4>
                             <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                                Our pricing accounts for all costs ensuring the majority of your budget
-                                pays for real human actions.
+                                *Our corporate pricing explicitly accounts for Other Costs of Engagement ensuring that the majority of your budget pays for real human actions.
                             </p>
                         </div>
 
