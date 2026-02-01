@@ -109,31 +109,33 @@ export function Hero() {
                     className="relative"
                 >
                     <motion.div
-                        whileHover={{ rotate: -1.5, y: -6 }}
-                        transition={{ type: "spring", stiffness: 160, damping: 18 }}
-                        className="relative mx-auto w-[360px] lg:w-[420px]"
+                        animate={{
+                            y: [0, -10, 0],
+                        }}
+                        transition={{
+                            duration: 2.8,
+                            ease: "easeInOut",
+                            repeat: Infinity,
+                        }}
+                        className="relative mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent p-0"
                     >
-                        {/* IMPORTANT: this image must exist in /public/images/iphone-hero.png */}
-                        <Image
-                            src="/images/iphone-hero.png"
-                            alt="Phone"
-                            width={420}
-                            height={760}
-                            priority
-                            className="w-full h-auto rounded-[44px] shadow-[var(--shadow-soft)]"
-                        />
+                        <div className="rounded-[31px] overflow-hidden">
+                            <Image
+                                src="/images/iphone-hero.png"
+                                alt="Phone"
+                                width={420}
+                                height={760}
+                                // fill
+                                priority
+                                className="w-full block"
+                            />
+                        </div>
 
                         {/* Floating payout */}
-                        <div className="absolute bottom-14 -left-10 rounded-2xl bg-white px-6 py-4 shadow-[var(--shadow-soft)]">
-                            <div className="flex items-center gap-3 mb-2">
-                                <span className="h-8 w-8 rounded-xl bg-green-500/10 grid place-items-center text-green-600 font-bold">
-                                    ✓
-                                </span>
-                                <p className="text-[11px] text-black/50 font-semibold">
-                                    PAYMENT RECEIVED
-                                </p>
-                            </div>
-                            <p className="font-extrabold text-[18px]">₦25,000.00</p>
+                        <div className="absolute bg-white -bottom-6 -left-8 glass-card p-6 rounded-[2rem] shadow-2xl border border-white/50 w-56 animate-bounce">
+                            <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-green-100 mb-3">✓</div>
+                            <p className="text-[8px] font-black text-gray-400 uppercase tracking-widest mb-0.5">Payment Received</p>
+                            <p className="text-xl font-black text-gray-900">₦25,000.00</p>
                         </div>
                     </motion.div>
                 </motion.div>
