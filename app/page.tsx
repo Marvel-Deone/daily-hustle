@@ -15,11 +15,11 @@ export default function Page() {
       <main className="overflow-visible">
         <Hero />
         <DailyHustleInterface />
-        {/* <OurTechnology /> */}
-        {/* <PocketToday /> */}
-        {/* <CampaignOnboardingCarousel /> */}
-        {/* <ManagedPlans /> */}
-        {/* <Review /> */}
+        <OurTechnology />
+        <PocketToday />
+        <CampaignOnboardingCarousel />
+        <ManagedPlans />
+        <Review />
       </main>
       <Footer />
     </>

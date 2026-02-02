@@ -45,13 +45,13 @@ export function Navbar() {
 
                 {/* Right */}
                 <div className="flex items-center gap-5">
-                    <Link href="" className="hidden md:inline text-[13px] text-black/60 hover:text-black transition">
+                    <Link href="https://workers.dailyhustle.fun/login" className="hidden md:inline text-[13px] text-black/60 hover:text-black transition">
                         Login
                     </Link>
 
-                    <button className="rounded-full bg-[color:var(--brand-red)] px-6 py-2.5 text-white text-[13px] font-semibold shadow-[var(--shadow-soft)]">
+                    <Link href="https://workers.dailyhustle.fun/" className="rounded-full bg-[color:var(--brand-red)] px-6 py-2.5 text-white text-[13px] font-semibold shadow-[var(--shadow-soft)]">
                         Get Started
-                    </button>
+                    </Link>
                 </div>
             </div>
         </header>

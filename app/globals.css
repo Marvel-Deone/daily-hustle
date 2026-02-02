@@ -5,10 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Base */
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
 body {
   margin: 0;

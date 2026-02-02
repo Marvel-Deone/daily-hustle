@@ -69,6 +69,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
     return (
@@ -92,12 +93,12 @@ export function Hero() {
                     </p>
 
                     <div className="mt-10 flex flex-wrap gap-4">
-                        <button className="rounded-full bg-[color:var(--brand-red)] px-7 py-3.5 text-white text-[13px] font-semibold shadow-[var(--shadow-soft)]">
+                        <Link href="https://workers.dailyhustle.fun/" target="_blank" className="rounded-full bg-[color:var(--brand-red)] px-7 py-3.5 text-white text-[13px] font-semibold shadow-[var(--shadow-soft)]">
                             Start Earning Now
-                        </button>
-                        <button className="rounded-full border border-black/10 px-7 py-3.5 text-[13px] font-semibold">
+                        </Link>
+                        <Link href="https://workers.dailyhustle.fun/" target="_blank" className="rounded-full border border-black/10 px-7 py-3.5 text-[13px] font-semibold">
                             Hire Workers
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
