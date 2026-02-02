@@ -333,7 +333,7 @@ export function ManagedPlans() {
                             <div
                                 key={i}
                                 className={clsx(
-                                    "bg-white w-[540px] md:w-[352px] lg:w-[386px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500  hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20",
+                                    "bg-white md:w-[352px] lg:w-[386px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500  hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20",
                                     card.active_border
                                         ? "border-b-gray-800"
                                         : "border-[#f1f5f9]"

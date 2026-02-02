@@ -36,42 +36,6 @@ export function Hero() {
                 </div>
 
                 {/* Right */}
-                {/* <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.55 }}
-                    className="relative"
-                >
-                    <motion.div
-                        animate={{
-                            y: [0, -12, 0],
-                        }}
-                        transition={{
-                            duration: 5.8,
-                            ease: "easeInOut",
-                            repeat: Infinity,
-                        }}
-                        className="relative rotate-2 mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent"
-                    >
-                        <div className="rounded-[31px] overflow-hidden">
-                            <Image
-                                src="/images/iphone-hero.png"
-                                alt="Phone"
-                                width={420}
-                                height={760}
-                                priority
-                                className="w-full block"
-                            />
-                        </div>
-
-                        Floating payout
-                        <div className="absolute bg-white -bottom-6 -left-8 glass-card p-6 rounded-[2rem] shadow-2xl border border-white/50 w-56 animate-bounce">
-                            <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-green-100 mb-3">✓</div>
-                            <p className="text-[8px] font-black text-gray-400 uppercase tracking-widest mb-0.5">Payment Received</p>
-                            <p className="text-xl font-black text-gray-900">₦25,000.00</p>
-                        </div>
-                    </motion.div>
-                </motion.div> */}
                 <motion.div
                     animate={{
                         y: [0, -12, 0],
