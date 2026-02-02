@@ -114,7 +114,7 @@ export function Hero() {
                         }}
                         transition={{
                             duration: 2.8,
-                            ease: "easeInOut",
+                            // ease: "easeInOut",
                             repeat: Infinity,
                         }}
                         className="relative rotate-2 mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent p-0"

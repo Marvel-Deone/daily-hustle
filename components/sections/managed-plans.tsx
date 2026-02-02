@@ -202,7 +202,7 @@ import useEmblaCarousel from "embla-carousel-react";
 const cards = [
     {
         title: "STARTUPS & SMES",
-        price: "≤ ₦400,000",
+        price: "₦400,000",
         tag: "BASE CAMPAIGN",
         features: [
             "3k – 10k Completions",
@@ -212,7 +212,7 @@ const cards = [
     },
     {
         title: "BRANDS & AGENCIES",
-        price: "≤ ₦3,500,000",
+        price: "₦3,500,000",
         tag: "MANAGED PACKAGE",
         features: [
             "20k – 100k+ Engagements",
@@ -222,7 +222,7 @@ const cards = [
     },
     {
         title: "MUSIC LABEL",
-        price: "≤ ₦1,750,000",
+        price: "₦1,750,000",
         tag: "STRATEGY RELEASE",
         popular: true,
         features: [
@@ -233,7 +233,7 @@ const cards = [
     },
     {
         title: "Fintech & Web3",
-        price: "≥ ₦750,000",
+        price: "₦750,000",
         tag: "Acquisition Sprint",
         popular: true,
         features: [
@@ -251,9 +251,6 @@ export function ManagedPlans() {
         loop: true,
         containScroll: "trimSnaps",
     });
-
-    const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-    const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
     const visibleCards = 2
     const maxIndex = cards.length - visibleCards

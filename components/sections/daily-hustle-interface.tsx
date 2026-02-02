@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 
 export function DailyHustleInterface() {
@@ -22,7 +23,7 @@ export function DailyHustleInterface() {
                         whileHover={{ y: -8 }}
                         transition={{ type: "spring", stiffness: 180, damping: 18 }}
                         className="p-1 bg-gray-900 shadow-2xl relative rounded-[1.8rem] hover:shadow-[#c4162a]/20">
-                        <div className="bg-white rounded-[1.8rem] overflow-hidden">
+                        {/* <div className="bg-white rounded-[1.8rem] overflow-hidden">
                             <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
                                 <div className="flex items-center space-x-3">
                                     <div className="w-8 h-8 rounded-full bg-[#BE123C] flex items-center justify-center text-white text-[10px] font-bold">
@@ -86,6 +87,13 @@ export function DailyHustleInterface() {
                                     </div>
                                 </div>
                             </div>
+                        </div> */}
+                          <div className="rounded-[1.8rem] overflow-hidden h-[409px]">
+                            <img
+                                src="/images/worker-dashboard.jpeg"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
                         </div>
 
                         <div className="bg-white absolute -right-6 -bottom-6 glass-card p-4 rounded-2xl shadow-xl border border-red-100 flex items-center space-x-3 animate-pulse">
@@ -103,7 +111,7 @@ export function DailyHustleInterface() {
                         whileHover={{ y: -8 }}
                         transition={{ type: "spring", stiffness: 180, damping: 18 }}
                         className="hustle-card p-1 rounded-[1.8rem] bg-gray-900 shadow-2xl relative hover:shadow-[#c4162a]/20">
-                        <div className="bg-white rounded-[1.8rem] overflow-hidden">
+                        {/* <div className="bg-white rounded-[1.8rem] overflow-hidden">
                             <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
                                 <div className="flex items-center space-x-3">
                                     <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-[10px] font-bold">
@@ -160,7 +168,16 @@ export function DailyHustleInterface() {
                                     </div>
                                 </div>
                             </div>
+                            </div> */}
+                        <div className="rounded-[1.8rem] overflow-hidden h-[409px]">
+                            <img
+                                src="/images/employer-console.jpeg"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
                         </div>
+
+                        {/* <img src="/images/employer-console.jpeg" alt="" className="!h-[409px] rounded-[1.8rem] overflow-hidden h-full" /> */}
 
                         <div className="bg-white absolute -left-6 -bottom-6 glass-card p-4 rounded-2xl shadow-xl border border-red-100 flex items-center space-x-3">
                             <div className="w-8 h-8 bg-[#BE123C] rounded-lg flex items-center justify-center text-white">
