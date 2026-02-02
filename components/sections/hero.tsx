@@ -72,8 +72,8 @@ import Image from "next/image"
 
 export function Hero() {
     return (
-        <section className="relative overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pt-16 pb-24 grid lg:grid-cols-2 gap-16 items-center">
+        <section className="relative">
+            <div className="overflow-hidden mx-auto max-w-7xl px-6 pt-16 pb-24 grid lg:grid-cols-2 gap-16 items-center">
                 {/* Left */}
                 <div className="max-w-xl">
                     <span className="inline-flex items-center gap-2 mb-6 rounded-full bg-red-50 px-4 py-2 text-[11px] font-semibold tracking-wide text-[color:var(--brand-red)]">

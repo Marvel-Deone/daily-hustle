@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export function DailyHustleInterface() {
     return (
-        <section id="experience" className="py-24 bg-gray-50 overflow-hidden relative">
+        <section id="experience" className="py-24 bg-gray-50 relative">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-[10px] font-black uppercase text-brand-red tracking-[0.4em] mb-4">
@@ -88,7 +88,7 @@ export function DailyHustleInterface() {
                         </div> */}
                           <div className="rounded-[1.8rem] overflow-hidden h-[409px]">
                             <img
-                                src="/images/worker-dashboard.jpeg"
+                                src="/images/worker-dashboard-2.jpeg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -169,7 +169,7 @@ export function DailyHustleInterface() {
                             </div> */}
                         <div className="rounded-[1.8rem] overflow-hidden h-[409px]">
                             <img
-                                src="/images/employer-console.jpeg"
+                                src="/images/employer-console-2.jpeg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
