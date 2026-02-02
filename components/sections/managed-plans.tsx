@@ -190,6 +190,10 @@
 //       </div>
 //     </section>
 //   )
+// bg-white w-[540px] md:w-[352px] lg:w-[386px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between
+//                        border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative
+//                        hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500
+                    //    hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20
 // }
 
 
@@ -198,6 +202,7 @@
 import { useCallback, useState } from "react"
 import { motion } from "framer-motion"
 import useEmblaCarousel from "embla-carousel-react";
+import clsx from "clsx";
 
 const cards = [
     {
@@ -214,6 +219,7 @@ const cards = [
         title: "BRANDS & AGENCIES",
         price: "₦3,500,000",
         tag: "MANAGED PACKAGE",
+        active_border: true,
         features: [
             "20k – 100k+ Engagements",
             "Geo & Demographic Targeting",
@@ -235,7 +241,7 @@ const cards = [
         title: "Fintech & Web3",
         price: "₦750,000",
         tag: "Acquisition Sprint",
-        popular: true,
+        active_border: true,
         features: [
             "Verified App Installs",
             "In-App Activity Proof",
@@ -260,10 +266,6 @@ export function ManagedPlans() {
 
     const next = () =>
         setIndex((i) => Math.min(i + 1, maxIndex))
-
-    // const prev = () => setIndex((i) => Math.max(i - 1, 0))
-    // const next = () =>
-    //     setIndex((i) => Math.min(i + 1, cards.length - 3))
 
     return (
         <section id="corporate" className="py-28 overflow-hidden">
@@ -325,22 +327,22 @@ export function ManagedPlans() {
                         ref={emblaRef}
                         animate={{ x: -index * 568 }} // card width + gap
                         transition={{ duration: 0.45, ease: "easeOut" }}
-                        className="flex gap-8 will-change-transform"
+                        className="flex gap-8"
                     >
                         {cards.map((card, i) => (
                             <div
                                 key={i}
-                                className="bg-white w-[540px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between
-                       border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative
-                       hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500
-                       hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20"
+                                className={clsx(
+                                    "bg-white w-[540px] md:w-[352px] lg:w-[386px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500  hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20",
+                                    card.active_border
+                                        ? "border-b-gray-800"
+                                        : "border-[#f1f5f9]"
+                                )}
                             >
-                                {/* Popular badge */}
-                                {/* {card.popular && (
-                                    <span className="absolute -top-4 right-8 bg-[#c4162a] text-white text-[9px] font-black uppercase px-4 py-1 rounded-full tracking-widest">
-                                        Most Popular
-                                    </span>
-                                )} */}
+                                {/* Hot badge */}
+                                {card.popular && (
+                                    <span className="absolute top-6 right-6 bg-[#c4162a] text-white text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Hot</span>
+                                )}
 
                                 <div>
                                     <h4 className="text-lg font-black uppercase mb-6 tracking-tight text-gray-800">
@@ -421,7 +423,7 @@ export function ManagedPlans() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }

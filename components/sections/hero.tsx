@@ -1,70 +1,3 @@
-// "use client"
-
-// import { motion } from "framer-motion"
-// import Image from "next/image"
-
-// export function Hero() {
-//   return (
-//     <section className="relative overflow-hidden">
-//       <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
-//         {/* Left */}
-//         <div>
-//           <span className="inline-block mb-4 rounded-full bg-red-50 px-4 py-1 text-xs font-medium text-brand-red">
-//             VERIFIED PLATFORM & INSTANT PAYOUTS
-//           </span>
-
-//           <h1 className="text-5xl font-extrabold leading-tight">
-//             EASY TASKS.
-//             <br />
-//             <span className="text-brand-red">DAILY CASH.</span>
-//           </h1>
-
-//           <p className="mt-6 max-w-md text-neutral-600">
-//             Join 50,000+ Nigerians earning real money daily using just their mobile phone.
-//           </p>
-
-//           <div className="mt-8 flex gap-4">
-//             <button className="rounded-full bg-brand-red px-6 py-3 text-white">
-//               Start Earning Now
-//             </button>
-//             <button className="rounded-full border px-6 py-3">
-//               Hire Workers
-//             </button>
-//           </div>
-//         </div>
-
-//         {/* Right */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 40 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           className="relative"
-//         >
-//           <motion.div
-//             whileHover={{ rotate: -2, y: -6 }}
-//             className="relative mx-auto w-[320px]"
-//           >
-//             <Image
-//               src="/images/iphone-hero.png"
-//               alt="Phone"
-//               width={320}
-//               height={640}
-//               className="rounded-[36px] shadow-soft"
-//             />
-
-//             {/* Floating payout */}
-//             <div className="absolute bottom-12 -left-10 rounded-2xl bg-white px-5 py-4 shadow-soft">
-//               <p className="text-xs text-neutral-500">Payment received</p>
-//               <p className="font-bold text-lg">₦25,000.00</p>
-//             </div>
-//           </motion.div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   )
-// }
-
-
 "use client"
 
 import { motion } from "framer-motion"
@@ -103,7 +36,7 @@ export function Hero() {
                 </div>
 
                 {/* Right */}
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.55 }}
@@ -111,14 +44,14 @@ export function Hero() {
                 >
                     <motion.div
                         animate={{
-                            y: [0, -10, 0],
+                            y: [0, -12, 0],
                         }}
                         transition={{
-                            duration: 2.8,
-                            // ease: "easeInOut",
+                            duration: 5.8,
+                            ease: "easeInOut",
                             repeat: Infinity,
                         }}
-                        className="relative rotate-2 mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent p-0"
+                        className="relative rotate-2 mx-auto w-[360px] lg:w-[400px] transition-shadow duration-500 rounded-[44px] border-[13px] bg-transparent"
                     >
                         <div className="rounded-[31px] overflow-hidden">
                             <Image
@@ -126,20 +59,57 @@ export function Hero() {
                                 alt="Phone"
                                 width={420}
                                 height={760}
-                                // fill
                                 priority
                                 className="w-full block"
                             />
                         </div>
 
-                        {/* Floating payout */}
+                        Floating payout
                         <div className="absolute bg-white -bottom-6 -left-8 glass-card p-6 rounded-[2rem] shadow-2xl border border-white/50 w-56 animate-bounce">
                             <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-green-100 mb-3">✓</div>
                             <p className="text-[8px] font-black text-gray-400 uppercase tracking-widest mb-0.5">Payment Received</p>
                             <p className="text-xl font-black text-gray-900">₦25,000.00</p>
                         </div>
                     </motion.div>
+                </motion.div> */}
+                <motion.div
+                    animate={{
+                        y: [0, -12, 0],
+                    }}
+                    transition={{
+                        duration: 4.8,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                    }}
+                    className="flex justify-end"
+                >
+                    <div className="relative w-full max-w-sm">
+                        <div
+                            className="relative overflow-hidden rotate-2 rounded-[3rem] bg-gray-900 p-3 shadow-2xl group">
+                            <img
+                                src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=800&q=80"
+                                alt="Payment Received Visual"
+                                className="rounded-[2.2rem]"
+                            />
+                        </div>
+
+                        <div className="bg-white absolute -bottom-6 -left-8 w-56 animate-bounce rounded-[2rem] border border-white/50 p-6 shadow-2xl glass-card">
+                            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green-500 text-xl font-bold text-white shadow-lg shadow-green-100">
+                                ✓
+                            </div>
+
+                            <p className="mb-0.5 text-[8px] font-black uppercase tracking-widest text-gray-400">
+                                Payment Received
+                            </p>
+
+                            <p className="text-xl font-black text-gray-900">
+                                ₦25,000.00
+                            </p>
+                        </div>
+                    </div>
+                    {/* </div> */}
                 </motion.div>
+
             </div>
             <div className="bg-gray-50/30 py-8 border-y border-gray-100">
                 <div className="max-w-7xl mx-auto px-6">

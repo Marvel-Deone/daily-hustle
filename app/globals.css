@@ -20,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Tokens used by your components (since you don’t want tailwind.config.ts) */
 :root {
   --brand-red: #c4162a;
   --brand-dark: #0b0f19;
