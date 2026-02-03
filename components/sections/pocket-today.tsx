@@ -279,66 +279,90 @@ export function PocketToday() {
                         transition={{ type: "spring", stiffness: 180, damping: 18 }}
                         className="relative z-10 mx-auto"
                     >
-                    <div className="absolute -inset-8 bg-red-50/40 rounded-[4rem] -rotate-3 blur-2xl"></div>
-                    <div className="relative rounded-[26px] hustle-card bg-white p-8 shadow-2xl hover:shadow-[#c4162a]/20 border-none">
-                        <div className="flex items-center justify-between mb-8 border-b pb-6 border-gray-100">
-                            <div className="flex items-center space-x-3">
-                                <div className="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center text-xl shadow shadow-yellow-100">
-                                    ⚡
+                        <div className="absolute -inset-8 bg-red-50/40 rounded-[4rem] -rotate-3 blur-2xl"></div>
+                        <div className="relative hustle-card bg-white p-8 shadow-2xl hover:shadow-[#c4162a]/10 border-none">
+                            <div className="flex items-center justify-between mb-8 border-b pb-6 border-gray-100">
+                                <div className="flex items-center space-x-3">
+                                    <div className="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center text-xl shadow shadow-yellow-100">
+                                        ⚡
+                                    </div>
+                                    <h4 className="text-lg font-black uppercase tracking-tighter">Live Marketplace</h4>
                                 </div>
-                                <h4 className="text-lg font-black uppercase tracking-tighter">
-                                    Live Tasks
-                                </h4>
+                                <span className="text-[9px] font-black uppercase text-brand-red bg-red-50 px-3 py-1 rounded-full border border-red-100 animate-pulse tracking-widest text-center">
+                                    Top Jobs
+                                </span>
                             </div>
-                            <span className="text-[9px] font-black uppercase text-brand-red bg-red-50 px-3 py-1 rounded-full border border-red-100 animate-pulse tracking-widest">
-                                Active
-                            </span>
+
+                            <div className="max-h-[400px] overflow-y-auto job-feed-scroll pr-3 mb-8 space-y-4">
+                                <div className="p-4 rounded-2xl bg-white border border-red-50 flex items-center justify-between hover:border-brand-red transition shadow-sm">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-sm">
+                                            f
+                                        </div>
+                                        <div>
+                                            <h5 className="text-[11px] font-black uppercase text-gray-900">Facebook Follow &amp; Like</h5>
+                                            <p className="text-[9px] text-gray-400 font-black uppercase">₦20</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-4 rounded-2xl bg-white border border-red-50 flex items-center justify-between hover:border-brand-red transition shadow-sm">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-lg">
+                                            📸
+                                        </div>
+                                        <div>
+                                            <h5 className="text-[11px] font-black uppercase text-gray-900">Instagram Like &amp; Comment</h5>
+                                            <p className="text-[9px] text-gray-400 font-black uppercase">Engagement • ₦15</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-4 rounded-2xl bg-white border border-red-50 flex items-center justify-between hover:border-brand-red transition shadow-sm">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white text-lg">
+                                            ▶
+                                        </div>
+                                        <div>
+                                            <h5 className="text-[11px] font-black uppercase text-gray-900">YouTube Subscribe</h5>
+                                            <p className="text-[9px] text-gray-400 font-black uppercase">Video • ₦15</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-4 rounded-2xl bg-white border border-red-50 flex items-center justify-between hover:border-brand-red transition shadow-sm">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="w-10 h-10 bg-blue-700 rounded-xl flex items-center justify-center text-white font-bold text-sm">
+                                            in
+                                        </div>
+                                        <div>
+                                            <h5 className="text-[11px] font-black uppercase text-gray-900">LinkedIn Connection</h5>
+                                            <p className="text-[9px] text-gray-400 font-black uppercase">Professional • ₦10</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-4 rounded-2xl bg-white border border-red-50 flex items-center justify-between hover:border-brand-red transition shadow-sm">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white text-lg">
+                                            🎵
+                                        </div>
+                                        <div>
+                                            <h5 className="text-[11px] font-black uppercase text-gray-900">TikTok Like &amp; Share</h5>
+                                            <p className="text-[9px] text-gray-400 font-black uppercase">Engagement • ₦10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a
+                                href="#"
+                                className="block w-full text-center py-4 bg-gray-900 text-white rounded-2xl font-black uppercase text-[10px] tracking-[0.2em] hover:bg-brand-red transition"
+                            >
+                                Explore All 1,200+ Jobs
+                            </a>
                         </div>
-
-                        <div className="max-h-[280px] overflow-y-auto job-feed-scroll pr-3 mb-8 space-y-4">
-                            <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-between hover:border-brand-red transition">
-                                <div className="flex items-center space-x-4">
-                                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-lg">
-                                        🎓
-                                    </div>
-                                    <div>
-                                        <h5 className="text-[11px] font-black uppercase text-gray-900">
-                                            Course Referral
-                                        </h5>
-                                        <p className="text-[9px] text-gray-400 font-black uppercase tracking-widest">
-                                            Affiliate • ₦2,500
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                            </div>
-
-                            <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-between hover:border-brand-red transition">
-                                <div className="flex items-center space-x-4">
-                                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-lg">
-                                        💬
-                                    </div>
-                                    <div>
-                                        <h5 className="text-[11px] font-black uppercase text-gray-900">
-                                            WhatsApp Status
-                                        </h5>
-                                        <p className="text-[9px] text-gray-400 font-black uppercase tracking-widest">
-                                            WhatsApp • ₦600
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                            </div>
-                        </div>
-
-                        <a
-                            href="#"
-                            className="block w-full text-center py-4 bg-gray-900 text-white rounded-2xl font-black uppercase text-[10px] tracking-[0.2em] hover:bg-brand-red transition"
-                        >
-                            Explore Jobs
-                        </a>
-                    </div>
-                </motion.div>
+                    </motion.div>
                 </div>
             </div>
         </section>

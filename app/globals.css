@@ -49,13 +49,33 @@ img {
   @apply !bg-white !rounded-[2rem] !border !border-[#f1f5f9] !transition-[all 0.5s cubic-bezier(0.19, 1, 0.22, 1)];
 } */
 
-/* .carousel-item {
-  flex: 0 0 33.333%;
-} */
-/* 
 .hustle-card {
-  background: white !important;
-  border-radius: 2rem !important;
-  border: 1px solid #f1f5f9 !important;
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) !important;
-} */
+  @apply bg-white rounded-[2rem] border border-[#f1f5f9] transition-all
+}
+
+.job-feed-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #BE123C transparent; /* Firefox: thumb + track */
+  overflow-y: auto;
+}
+
+/* Chrome, Safari, Edge */
+.job-feed-scroll::-webkit-scrollbar {
+  width: 6px; /* slim */
+}
+
+.job-feed-scroll::-webkit-scrollbar-track {
+  background: transparent; /* track hidden */
+}
+
+.job-feed-scroll::-webkit-scrollbar-thumb {
+  background-color: #BE123C;
+  border-radius: 10px;
+}
+
+/* hide buttons completely */
+.job-feed-scroll::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}

@@ -75,7 +75,7 @@ export function Hero() {
                 </motion.div>
 
             </div>
-            <div className="bg-gray-50/30 py-8 border-y border-gray-100">
+            {/* <div className="bg-gray-50/30 py-8 border-y border-gray-100">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
                         <span className="text-[10px] font-black uppercase tracking-[0.3em]">
@@ -92,7 +92,7 @@ export function Hero() {
                         </span>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </section>
     )

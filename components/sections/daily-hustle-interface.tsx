@@ -8,10 +8,10 @@ export function DailyHustleInterface() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-[10px] font-black uppercase text-brand-red tracking-[0.4em] mb-4">
-                        Platform Sneak-Peek
+                        Interfac Sneak-Peek
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-gray-900">
-                        Experience the <span className="text-brand-red">DailyHustle</span> Interface
+                        Mock Data  <span className="text-brand-red">Processes</span>
                     </h3>
                 </div>
 
