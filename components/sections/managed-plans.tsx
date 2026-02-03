@@ -193,7 +193,7 @@
 // bg-white w-[540px] md:w-[352px] lg:w-[386px] flex-shrink-0 rounded-[2rem] p-10 flex flex-col justify-between
 //                        border-[1.5px] border-[#f1f5f9] border-b-[8px] shadow-md relative
 //                        hover:shadow-xl hover:-translate-y-2.5 transition-all duration-500
-                    //    hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20
+//    hover:border-[#c4162a]/20 hover:border-b-[#c4162a]/20
 // }
 
 
@@ -371,7 +371,7 @@ export function ManagedPlans() {
                     </motion.div>
                 </div>
 
-                <div className="mt-20 relative overflow-hidden rounded-[2.5rem] bg-gray-950 p-10 sm:p-16 text-white shadow-2xl">
+                {/* <div className="mt-20 relative overflow-hidden rounded-[2.5rem] bg-gray-950 p-10 sm:p-16 text-white shadow-2xl">
                     <div className="absolute top-0 right-0 w-80 h-80 bg-brand-red opacity-10 blur-3xl rounded-full" />
 
                     <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
@@ -422,8 +422,49 @@ export function ManagedPlans() {
                             </div>
                         </div>
                     </div>
+                </div> */}
+                <div className="mt-20 relative overflow-hidden rounded-[2.5rem] bg-gray-950 p-10 sm:p-16 text-white shadow-2xl">
+                    <div className="absolute top-0 right-0 w-80 h-80 bg-brand-red opacity-10 blur-3xl rounded-full"></div>
+
+                    <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 text-left">
+                        <div className="lg:w-1/2">
+                            <h4 className="text-2xl font-black uppercase mb-4 tracking-tight text-brand-red italic">
+                                Pricing Transparency: Engagement Costs
+                            </h4>
+
+                            <p className="text-sm text-gray-400 font-medium leading-relaxed">
+                                *Our corporate pricing explicitly accounts for{" "}
+                                <strong>Other Costs of Engagement</strong> including: Platform Service
+                                Commissions (15% for entity, 25% for Commercial), Bank
+                                Transaction/Switching Fees (1.5%), Anti-Fraud Verification Overhead, and
+                                VAT. This ensures that the majority of your budget goes directly to paying
+                                the Workforce for real actions.
+                            </p>
+                        </div>
+
+                        <div className="lg:w-1/2 grid grid-cols-2 gap-3">
+                            <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                                <p className="text-brand-red font-black text-xl mb-1 tracking-tighter">
+                                    15–25%
+                                </p>
+                                <p className="text-[8px] font-black uppercase text-gray-500 tracking-widest leading-tight">
+                                    Service Commission
+                                </p>
+                            </div>
+
+                            <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                                <p className="text-brand-red font-black text-xl mb-1 tracking-tighter">
+                                    1.5%
+                                </p>
+                                <p className="text-[8px] font-black uppercase text-gray-500 tracking-widest leading-tight">
+                                    Bank Fees
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div >
-        </section >
+
+            </div>
+        </section>
     )
 }
