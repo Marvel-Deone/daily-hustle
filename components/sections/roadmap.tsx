@@ -15,7 +15,7 @@ export function RoadmapSection () {
         </h3>
 
         <div className="relative grid gap-8 md:grid-cols-3">
-          <div className="hustle-card border-t-8 border-t-gray-100 bg-white p-10">
+          <div className="hustle-card !border-t-8 !border-t-gray-100 bg-white p-10 transition-all duration-300 hover:shadow-2xl hover:shadow-[#c4162a]/10 hover:!border-[#BE123C]/20 hover:border-l-[#BE123C]/20 hover:!-translate-y-2">
             <div className="mb-6 text-2xl font-black text-brand-red">0h</div>
             <h4 className="mb-4 text-sm font-black uppercase tracking-tight text-gray-900">
               Deposit &amp; Kickoff
@@ -25,7 +25,7 @@ export function RoadmapSection () {
             </p>
           </div>
 
-          <div className="hustle-card scale-105 border-t-8 border-t-brand-red bg-white p-10 shadow-xl">
+          <div className="hustle-card scale-105 !border-t-8 hover:!border-t-[#BE123C]/20 bg-white p-10 shadow-xl transition-all duration-300 hover:shadow-2xl hover:shadow-[#c4162a]/10 hover:border-[#BE123C]/20 hover:border-l-[#BE123C]/20 hover:scale-95">
             <div className="mb-6 text-2xl font-black text-brand-red">24h</div>
             <h4 className="mb-4 text-sm font-black uppercase tracking-tight text-gray-900">
               Workforce Deployment
@@ -35,7 +35,7 @@ export function RoadmapSection () {
             </p>
           </div>
 
-          <div className="hustle-card border-t-8 border-t-gray-100 bg-white p-10">
+          <div className="hustle-card !border-t-8 !border-t-gray-100 bg-white p-10 transition-all duration-300 hover:shadow-2xl hover:shadow-[#c4162a]/10 hover:!border-[#BE123C]/20 hover:border-l-[#BE123C]/20 hover:!-translate-y-2">
             <div className="mb-6 text-2xl font-black text-brand-red">72h</div>
             <h4 className="mb-4 text-sm font-black uppercase tracking-tight text-gray-900">
               Velocity Spike
