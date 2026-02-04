@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
     return (
         <footer className="bg-white py-16 border-t border-gray-100">
@@ -25,12 +27,12 @@ export function Footer() {
                         </h5>
                         <ul className="space-y-4 text-[10px] font-bold text-gray-400 uppercase tracking-[0.1em]">
                             <li>
-                                <a href="#" className="hover:text-brand-red transition">
+                                <Link href="/contract-slas" className="hover:text-brand-red transition">
                                     Contract SLAs
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-brand-red transition">
+                                <a href="/verified-payouts" className="hover:text-brand-red transition">
                                     Verified Payouts
                                 </a>
                             </li>
@@ -43,14 +45,14 @@ export function Footer() {
                         </h5>
                         <ul className="space-y-4 text-[10px] font-bold text-gray-400 uppercase tracking-[0.1em]">
                             <li>
-                                <a href="#" className="hover:text-brand-red transition">
+                                <Link href="/terms-of-service" className="hover:text-brand-red transition">
                                     Terms of Service
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-brand-red transition">
+                                <Link href="/privacy-policy" className="hover:text-brand-red transition">
                                     Privacy Policy
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

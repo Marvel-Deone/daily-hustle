@@ -54,18 +54,22 @@ img {
 }
 
 .job-feed-scroll {
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #BE123C transparent; /* Firefox: thumb + track */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #BE123C transparent;
+  /* Firefox: thumb + track */
   overflow-y: auto;
 }
 
 /* Chrome, Safari, Edge */
 .job-feed-scroll::-webkit-scrollbar {
-  width: 6px; /* slim */
+  width: 6px;
+  /* slim */
 }
 
 .job-feed-scroll::-webkit-scrollbar-track {
-  background: transparent; /* track hidden */
+  background: transparent;
+  /* track hidden */
 }
 
 .job-feed-scroll::-webkit-scrollbar-thumb {
@@ -78,4 +82,39 @@ img {
   display: none;
   height: 0;
   width: 0;
+}
+
+.section-h2 {
+  @apply !text-[0.95rem] !mb-4 !font-black !uppercase !text-[#BE123C] !tracking-wider !pb-2 border-b border-gray-100;
+}
+
+.section-p {
+  @apply !mb-5 !text-[0.95rem] !text-[#4b5563] !text-justify;
+}
+
+/* .section-h3 {
+  @apply font-extrabold text-[0.85rem] text-[#111827] mt-6 mb-3 uppercase
+} */
+
+.section-list {
+  @apply !mb-6 !text-[#4b5563] !text-[0.95rem]
+}
+
+.section-bullet {
+  @apply mb-3
+}
+
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-carousel {
+  animation: carousel 45s linear infinite;
 }
